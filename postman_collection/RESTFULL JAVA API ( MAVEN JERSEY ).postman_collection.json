@@ -1,0 +1,174 @@
+{
+	"id": "8ff4bdef-3a1a-543c-7405-cf0019b7a7de",
+	"name": "RESTFULL JAVA API ( MAVEN JERSEY )",
+	"description": "",
+	"order": [
+		"8e1e8b36-70c5-e8ba-49be-13a8ad165d68",
+		"7382cd4e-88ee-9279-b48e-6f04226d128d",
+		"14c5570b-468d-6550-f127-689c4678060b",
+		"7a5328d6-acb1-1b82-aca5-4ca61db6c3d5",
+		"cb739eec-7bf2-590d-0fb3-de57dc191cf2",
+		"20fe72c7-4b55-0b2a-6c4a-d4c4b5134bc4"
+	],
+	"folders": [],
+	"timestamp": 1487601994881,
+	"owner": "740562",
+	"public": false,
+	"requests": [
+		{
+			"id": "14c5570b-468d-6550-f127-689c4678060b",
+			"headers": "",
+			"url": "http://localhost:8080/IBMPOC/webapi/myresource/1",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "8ff4bdef-3a1a-543c-7405-cf0019b7a7de",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get User By user Id",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1487611197071,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "20fe72c7-4b55-0b2a-6c4a-d4c4b5134bc4",
+			"headers": "",
+			"url": "http://localhost:8080/IBMPOC/webapi/myresource/4",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487612447742,
+			"name": "Delete User by user id",
+			"description": "",
+			"collectionId": "8ff4bdef-3a1a-543c-7405-cf0019b7a7de",
+			"responses": []
+		},
+		{
+			"id": "7382cd4e-88ee-9279-b48e-6f04226d128d",
+			"headers": "",
+			"url": "http://localhost:8080/IBMPOC/webapi/myresource/1",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "8ff4bdef-3a1a-543c-7405-cf0019b7a7de",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get User By ID",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1487602037533,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "7a5328d6-acb1-1b82-aca5-4ca61db6c3d5",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "http://localhost:8080/IBMPOC/webapi/myresource",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "name",
+					"value": "pratik",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "pratik@p.com",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "marks",
+					"value": "77",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "college_name",
+					"value": "ABCD",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487612437879,
+			"name": "Add New User",
+			"description": "",
+			"collectionId": "8ff4bdef-3a1a-543c-7405-cf0019b7a7de",
+			"responses": []
+		},
+		{
+			"id": "8e1e8b36-70c5-e8ba-49be-13a8ad165d68",
+			"headers": "",
+			"url": "http://localhost:8080/IBMPOC/webapi/myresource",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "8ff4bdef-3a1a-543c-7405-cf0019b7a7de",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get All Users",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1487601994880,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "cb739eec-7bf2-590d-0fb3-de57dc191cf2",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "http://localhost:8080/IBMPOC/webapi/myresource/2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "8ff4bdef-3a1a-543c-7405-cf0019b7a7de",
+			"data": [
+				{
+					"key": "name",
+					"value": "akshay mohol",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "marks",
+					"value": "88",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "Update User wth user id and updated info",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1487612179849,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
