@@ -12,6 +12,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import com.chetan.source.dao.Database;
 import com.chetan.source.model.User;
@@ -36,7 +37,7 @@ public class MyResource {
     
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    public void addUser(@FormParam("name")@DefaultValue(" ")String name,
+    public Response addUser(@FormParam("name")@DefaultValue(" ")String name,
     					@FormParam("email")@DefaultValue(" ")String email,
     					@FormParam("college_name")@DefaultValue(" ")String college_name,
     					@FormParam("marks")@DefaultValue("0.00")String marks){
@@ -48,16 +49,16 @@ public class MyResource {
     	user.setMarks(Double.parseDouble(marks));
     	
     	new Database().insertUser(user);
-    	
+    	return Response.status(201).build();
     }
     
     @PUT
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public void updateUser(@PathParam("id")int user_id,
-    						@FormParam("name")@DefaultValue("default")String name,
-    					@FormParam("email")@DefaultValue("default")String email,
-    					@FormParam("college_name")@DefaultValue("default")String college_name,
+    						@FormParam("name")@DefaultValue("")String name,
+    					@FormParam("email")@DefaultValue("")String email,
+    					@FormParam("college_name")@DefaultValue("")String college_name,
     					@FormParam("marks")@DefaultValue("0.00")String marks){
     	
     	User user= new User();

@@ -136,19 +136,19 @@ public class Database {
 			
 			stmt = conn.createStatement();
 			
-			if(!user.getName().equalsIgnoreCase("default"))
+			if(!user.getName().equals(""))
 			{
 				qry = "update practice set name = '"+user.getName()+"' where roll_no = "+id;
 				rs = stmt.executeUpdate(qry);
 			}
 			
-			if(!user.getCollege_name().equalsIgnoreCase("default"))
+			if(!user.getCollege_name().equals(""))
 			{
 				qry = "update practice set college_name = '"+user.getCollege_name()+"' where roll_no = "+id;
 				rs = stmt.executeUpdate(qry);
 			}
 			
-			if(!user.getEmail().equalsIgnoreCase("default"))
+			if(!user.getEmail().equals(""))
 			{
 				qry = "update practice set email = '"+user.getEmail()+"' where roll_no = "+id;
 				rs = stmt.executeUpdate(qry);

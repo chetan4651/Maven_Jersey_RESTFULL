@@ -24,6 +24,52 @@ public class User {
 		this.email = email;
 	}
 
+		
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((college_name == null) ? 0 : college_name.hashCode());
+		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(marks);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + roll_no;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		if (college_name == null) {
+			if (other.college_name != null)
+				return false;
+		} else if (!college_name.equals(other.college_name))
+			return false;
+		if (email == null) {
+			if (other.email != null)
+				return false;
+		} else if (!email.equals(other.email))
+			return false;
+		if (Double.doubleToLongBits(marks) != Double.doubleToLongBits(other.marks))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (roll_no != other.roll_no)
+			return false;
+		return true;
+	}
+
 	public int getRoll_no() {
 		return roll_no;
 	}
